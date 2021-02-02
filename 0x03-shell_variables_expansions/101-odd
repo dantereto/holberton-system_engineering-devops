@@ -1,2 +1,2 @@
 #!/bin/bash
-cat |grep -v $'[2468]'|tr -s ' '
+cat |grep $'[13579]'|tr -s ' '
