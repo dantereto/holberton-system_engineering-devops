@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#print using a loop
+while IFS=: read -r ec; do
+    echo "$ec" | cut -d ':' -f1,3,6
+done < /etc/passwd
