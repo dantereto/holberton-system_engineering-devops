@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#print using a loop
 i=0
 while ((i < 10));
 do
