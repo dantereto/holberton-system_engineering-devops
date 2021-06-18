@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #print using a loop
-min=0
+min=1
 hour=0
 while ((hour <= 12));
 do
