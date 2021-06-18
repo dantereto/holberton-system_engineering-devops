@@ -2,7 +2,7 @@
 #print using a loop
 min=0
 hour=0
-while ((hour < 12));
+while ((hour <= 12));
 do
     echo Hour: $hour
     while ((min < 60));
