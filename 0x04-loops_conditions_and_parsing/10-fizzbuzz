@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
+i=1
 for i in {1..100} 
 do  
     
@@ -9,7 +10,7 @@ do
     elif ((i % 3 == 0));
     then
 	 echo "Fizz"
-    elif ((i % 3 == 0));
+    elif ((i % 5 == 0));
     then
 	echo "Buzz"
     else
