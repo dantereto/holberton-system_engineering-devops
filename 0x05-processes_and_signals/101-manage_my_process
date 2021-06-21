@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # comments
-. /lib/lsb/init-functions
 start() {
 ./manage_my_process &
 echo "$!" > /var/run/my_process.pid
