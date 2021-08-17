@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#transfer file 
+#transfer file
 
 if [ $# -lt 3 ];
 then
