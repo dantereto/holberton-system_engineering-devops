@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script to install HAProxy
+# load
 apt-get update
 apt-get install -y haproxy=1.6.\*
 echo "
