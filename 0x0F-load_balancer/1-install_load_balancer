@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install haproxy d
+# Install haproxy 
 sudo apt-get -y update
 sudo apt-get -y install haproxy
 HAPROXY_CONFIG="/etc/haproxy/haproxy.cfg"
@@ -11,7 +11,7 @@ frontend web-frontend
           default_backend web-backend
 backend web-backend
 balance roundrobin
-server gc-2247-web-01-1629326045 check
-server gc-2247-web-02-1629695356 check"
+server 2247-web-01 34.139.63.159 check
+server 2247-web-02 34.139.12.106 check"
 echo "$DOWLOAD" >>"$HAPROXY_CONFIG"
 sudo service haproxy start
