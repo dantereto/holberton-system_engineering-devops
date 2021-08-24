@@ -7,4 +7,4 @@ exec { 'add_header':
   sudo sed -i "/server_name _/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enable/default
   sudo service nginx restart',
   provider => 'shell',
-}
+  }
