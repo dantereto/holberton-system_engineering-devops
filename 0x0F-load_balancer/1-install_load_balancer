@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install haproxy
+# Install haproxy d
 sudo apt-get -y update
 sudo apt-get -y install haproxy
 HAPROXY_CONFIG="/etc/haproxy/haproxy.cfg"
