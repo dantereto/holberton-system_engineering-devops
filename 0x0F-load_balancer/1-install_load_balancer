@@ -8,6 +8,6 @@ frontend 52.87.176.5
     default_backend web_servers
 backend web_servers
     balance roundrobin
-    server 2247-web-01 34.139.63.159
-    server 2247-web-02 34.139.12.106" >> /etc/haproxy/haproxy.cfg
+    server 2247-web-01 35.231.231.142
+    server 2247-web-02 35.231.46.212" >> /etc/haproxy/haproxy.cfg
 /etc/init.d/haproxy start
