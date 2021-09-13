@@ -7,25 +7,25 @@ import sys
 
 def function():
     """function"""
-    user = requests.get('https://jsonplaceholder.typicode.com/users')
+    user = requests.get("https://jsonplaceholder.typicode.com/users")
     for r_user in user.json():
-        if r_user.get('id') == int(sys.argv[1]):
-            EMPLOYEE_NAME = (r_user.get('name'))
+        if r_user.get("id") == int(sys.argv[1]):
+            EMPLOYEE_NAME = (r_user.get("name"))
             break
     NUMBER_OF_DONE_TASKS = 0
     TOTAL = 0
     TASK_TITLE = []
-    todos = requests.get('https://jsonplaceholder.typicode.com/todos')
+    todos = requests.get("https://jsonplaceholder.typicode.com/todos")
     for r_todos in todos.json():
-        if r_todos.get('userId') == int(sys.argv[1]):
+        if r_todos.get("userId") == int(sys.argv[1]):
             TOTAL += 1
-            if r_todos.get('completed') is True:
+            if r_todos.get("completed") is True:
                 NUMBER_OF_DONE_TASKS += 1
-                TASK_TITLE.append(r_todos.get('title'))
-    print('Employee {} is done with tasks({}/{}):'.format(EMPLOYEE_NAME,
+                TASK_TITLE.append(r_todos.get("title"))
+    print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
                                                           NUMBER_OF_DONE_TASKS,
                                                           TOTAL))
     for task in TASK_TITLE:
-        print('\t {}'.format(task))
+        print('\t{}'.format(task))
 if __name__ == '__main__':
     function()
