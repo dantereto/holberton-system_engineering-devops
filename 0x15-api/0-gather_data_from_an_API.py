@@ -5,8 +5,8 @@ import requests
 import sys
 
 
-if __name__ == '__main__':
-
+def function():
+    """function"""
     id_u = int(sys.argv[1])
     user = requests.get('https://jsonplaceholder.typicode.com/users')
     for r_user in user.json():
@@ -28,3 +28,5 @@ if __name__ == '__main__':
                                                           TOTAL))
     for task in TASK_TITLE:
         print('\t {}'.format(task))
+if __name__ == '__main__':
+    function()
