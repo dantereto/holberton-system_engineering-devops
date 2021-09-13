@@ -26,6 +26,6 @@ def function():
                                                           NUMBER_OF_DONE_TASKS,
                                                           TOTAL))
     for task in TASK_TITLE:
-        print('\t{}'.format(task))
+        print('\t {}'.format(task))
 if __name__ == '__main__':
     function()
