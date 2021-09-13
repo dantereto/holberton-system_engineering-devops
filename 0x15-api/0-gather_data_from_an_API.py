@@ -7,10 +7,9 @@ import sys
 
 def function():
     """function"""
-    id_u = int(sys.argv[1])
     user = requests.get('https://jsonplaceholder.typicode.com/users')
     for r_user in user.json():
-        if r_user.get('id') == id_u:
+        if r_user.get('id') == int(sys.argv[1]):
             EMPLOYEE_NAME = (r_user.get('name'))
             break
     NUMBER_OF_DONE_TASKS = 0
