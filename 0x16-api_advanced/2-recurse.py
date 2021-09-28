@@ -7,6 +7,7 @@ after = None
 
 
 def recurse(subreddit, hot_list=[]):
+    global after
     url_data = requests.get('https://www.reddit.com/r/{}/hot.json'
                             .format(subreddit),
                             params={'after': after},
