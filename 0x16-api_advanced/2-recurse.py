@@ -1,17 +1,15 @@
 #!/usr/bin/python3
 """0-main"""
 
-count = 0
-after = None
 
 import requests
+after = None
 
 
 def recurse(subreddit, hot_list=[]):
-    global after
     url_data = requests.get('https://www.reddit.com/r/{}/hot.json'
                             .format(subreddit),
-                            params={'count': count, 'after': after},
+                            params={'after': after},
                             headers={'User-Agent': 'My-User'},
                             allow_redirects=False)
     if url_data.status_code == 200:
