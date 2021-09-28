@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-#bash start
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo service nginx start
-echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
-sed -i "/server_name _;/a add_header X-Served-By \$hostname;" /etc/nginx/sites-enabled/default
-sudo service nginx restart
